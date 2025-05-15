@@ -1,6 +1,6 @@
 # Location-planning-of-flexible-distribution-network
 
-The following points should be noted.
+The following points should be noted:
   1、When using the solver to calculate Case 1, Case 3, Case 4 and Case 5, numerical issues may arise. This is because the default convergence accuracy of the solver is 1e-7, while 
 the final convergence accuracy of the above cases during the solution process ranges between 1e-4 and 1e-5. It should be noted that this solution accuracy has met the calculation 
 requirements.  
@@ -10,3 +10,4 @@ Reference [Zero Duality Gap in Optimal Power Flow Problem] (doi: 10.1109/TPWRS.2
 strong duality.
   3、For Case 1, Case 3, Case 4 and Case 5, this paper adopts the graph decomposition technique, i.e., instead of treating the system as an integrated 66-bus system, it is regarded 
 as two 33-bus systems. Each system has its own OPF, and communication between systems is carried out via SOPs or PRFCs (or treated as a virtual "wire").
+  4、Due to the excessive amount of original data, we are currently organizing it. We will first upload the core code and then sequentially upload all the data over the next period.
