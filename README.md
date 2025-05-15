@@ -1,6 +1,7 @@
 # Location-planning-of-flexible-distribution-network
 
 The following points should be noted:
+
   1、When using the solver to calculate Case 1, Case 3, Case 4 and Case 5, numerical issues may arise. This is because the default convergence accuracy of the solver is 1e-7, while 
 the final convergence accuracy of the above cases during the solution process ranges between 1e-4 and 1e-5. It should be noted that this solution accuracy has met the calculation 
 requirements.  
