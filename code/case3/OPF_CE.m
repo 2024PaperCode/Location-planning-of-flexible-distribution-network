@@ -4,7 +4,7 @@ function [W1, P1, Q1,Plm1, Qlm1, Vk1, alpha1, W2, P2, Q2,Plm2, Qlm2,Vk2, alpha2,
     alpha1 = sdpvar(ng1,1);
     alpha2 = sdpvar(ng2,1);
     ndeice = nsop + nrpfc;
-    fr = [fr_sop, to_rpfc];
+    fr = [fr_sop, fr_rpfc];
     to = [to_sop, to_rpfc];
     Cmax = [Cmax_sop, Cmax_rpfc];
     
