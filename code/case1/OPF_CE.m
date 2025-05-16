@@ -1,8 +1,8 @@
 function [W1, P1, Q1,Plm1, Qlm1, Vk1, alpha1, W2, P2, Q2,Plm2, Qlm2,Vk2, alpha2, Pdevice, Qdevice, total_cost, loss_cost, device_cost] = myOPF(nsop, nrpfc, fr_sop, to_sop,Cmax_sop, fr_rpfc, to_rpfc, Cmax_rpfc, mpc1,baseMVA1, bus1, gen1, branch1, gencost1, nl1, ns1, ng1, Ybus1, mpc2, baseMVA2, bus2, gen2, branch2, gencost2, nl2, ns2, ng2, Ybus2)
     W1 = sdpvar(2*ns1, 2*ns1,'symmetric');
     W2 = sdpvar(2*ns2, 2*ns2,'symmetric');
-    alpha1 = sdpvar(ng1+nv,1);
-    alpha2 = sdpvar(ng2+nv,1);
+    alpha1 = sdpvar(ng1,1);
+    alpha2 = sdpvar(ng2,1);
     ndeice = nsop + nrpfc;
     fr = [fr_sop, to_rpfc];
     to = [to_sop, to_rpfc];
