@@ -14,4 +14,5 @@ strong duality.
   3、For Case 1, Case 3, Case 4 and Case 5, this paper adopts the graph decomposition technique, i.e., instead of treating the system as an integrated 66-bus system, it is regarded 
 as two 33-bus systems. Each system has its own OPF, and communication between systems is carried out via SOPs or PRFCs (or treated as a virtual "wire").
 
+If you have any questions about the manuscript or code, please contact 1743773910@qq.com or leave a message under this repository.
   
