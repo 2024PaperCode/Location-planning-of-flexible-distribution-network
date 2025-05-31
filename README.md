@@ -5,7 +5,9 @@ The following points should be noted:
   1、For Case 2 and Case 6, the dual technique must be used for solution; otherwise, the solution may fail. As the solver is implemented via the primal-dual interior-point method, the
 problem can be directly solved by the solver after being transformed into a dual problem. For the dualization of the problem, refer to the dual-OPF-CE.pdf. It should be noted that 
 Reference [Zero Duality Gap in Optimal Power Flow Problem] (doi: 10.1109/TPWRS.2011.2160974) has proven that the relaxation problem and the dual OPF problem in the main text satisfy 
-strong duality.
+strong duality. The reasons why we did not adopt the dual OPF algorithm for Case 1, Case 3, Case 4 and Case 5 are as follows: At the beginning, we only considered small-scale 
+problems, and large-scale problems were added later. Subsequently, we found that the original algorithm would fail to solve large-scale problems, so we adopted the dual OPF to solve 
+large-scale problems. We also briefly introduced the dual OPF in the main text.
 
   2、When using the solver to calculate Case 1, Case 3, Case 4 and Case 5, numerical issues may arise, and the solutions obtained by using the two methods (the solution method for 
   the original problem and the solution method for the dual problem) may be inconsistent. This is because the default convergence accuracy of the solver is 1e-7, while the final 
