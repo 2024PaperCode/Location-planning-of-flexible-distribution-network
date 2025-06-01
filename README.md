@@ -6,7 +6,7 @@ The following points should be noted:
   should be noted that Reference [Zero Duality Gap in Optimal Power Flow Problem] (doi: 10.1109/TPWRS.2011.2160974) has proven that the relaxation problem and the dual OPF problem in 
   the main text satisfy strong duality, that is, its dual gap is zero. Therefore, the two solving methods are essentially equivalent. The reasons why we did not adopt the dual OPF algorithm for Case 1, Case 3, Case 4 and Case 5 are as follows: 
   At the beginning, we only considered small-scale problems, and large-scale problems were added later. Subsequently, we found that the original algorithm would fail to solve large-
-  scale problems, so we adopted the dual OPF to solve large-scale problems. We also briefly introduced the dual OPF in the main text.
+  scale problems, so we adopted the dual OPF to solve large-scale problems. We also briefly introduced the dual OPF in the main text. Due to the particularity of this transformation (see the PDF for details), the general transformation is highly difficult. Therefore, we have not introduced it into the main text.
 
   2、For ALL cases, their solution accuracy must be set to at least 1e-5. When the accuracy reaches 1e-5, the solution can be considered successful. After testing, the results with an accuracy of 1e-5 and 1e-7 differ very slightly (<0.1), so the two can be approximately considered equal.
 
