@@ -15,5 +15,4 @@ as two 33-bus systems. Each system has its own OPF, and communication between sy
 
 If you have any questions about the manuscript or code, please contact 1743773910@qq.com or leave a message under this repository.
 
-If you have any questions about the manuscript or code, please contact 1743773910@qq.com or leave a message under this repository.
   
