@@ -8,7 +8,7 @@ The following points should be noted:
   At the beginning, we only considered small-scale problems, and large-scale problems were added later. Subsequently, we found that the original algorithm would fail to solve large-
   scale problems, so we adopted the dual OPF to solve large-scale problems. We also briefly introduced the dual OPF in the main text. Due to the particularity of this transformation (see the PDF for details), the general transformation is highly difficult. Therefore, we have not introduced it into the main text.
 
-  2、For ALL cases, their solution accuracy must be set to at least 1e-5. When the accuracy reaches 1e-5, the solution can be considered successful. After testing, the results with an accuracy of 1e-5 and 1e-7 differ very slightly (<0.1), so the two can be approximately considered equal.
+  2、For ALL cases, their solution accuracy must be set to at least 1e-5. When the accuracy reaches 1e-5, the solution can be considered successful. After testing, the results with an accuracy of 1e-5 and 1e-7 differ very slightly (≈0.2), for example, for IEEE 33 bus system, the value is 78.34 when the accuracy is 1e-4 and 78.09 when the accuracy is 1e-8, so the two can be approximately considered equal.
 
   3、For Case 1, Case 3, Case 4 and Case 5, this paper adopts the graph decomposition technique, i.e., instead of treating the system as an integrated 66-bus system, it is regarded 
 as two 33-bus systems. Each system has its own OPF, and communication between systems is carried out via SOPs or PRFCs (or treated as a virtual "wire").
