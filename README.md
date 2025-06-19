@@ -14,8 +14,9 @@ The following points should be noted:
 accuracy of 1e-4 roughly meets the accuracy requirements, and the optimal gap between the two is very small , for example, for IEEE 33 bus system, the value is 78.34 when 
 the accuracy is 1e-4 and 78.10 when the accuracy is 1e-7, the optimal gap between the two is approximately 0.3%. So the two can be approximately considered equal.
 
-  3、For Case 1, Case 3, Case 4 and Case 5, this paper adopts the **graph decomposition technique**, i.e., instead of treating the system as an integrated 66-bus system, it is regarded 
-as two 33-bus systems. Each system has its own OPF, and communication between systems is carried out via SOPs or PRFCs (or treated as a virtual "wire").
+  3、For Case 1, Case 3, Case 4 and Case 5, this paper adopts the **graph decomposition technique**, i.e., instead of treating the system as an integrated 66-bus system, it is 
+regarded as two 33-bus systems. Each system has its own OPF, and communication between systems is carried out via SOPs or PRFCs (or treated as a virtual "wire"). For more detailed 
+information on graph decomposition techniques, please refer to [A Two-Stage Decomposition Approach for AC Optimal Power Flow] (doi: 10.1109/TPWRS.2020.3002189).
 
   4、The calculation times listed in the paper are all based on the testing of the dual method, which is the average time obtained from two runs.
 
