@@ -2,7 +2,7 @@
 
 The following points should be noted:
 
-  1、For Case 2 and Case 6, the dual technique must be used for solution; otherwise, the solution may fail. For the dualization of the problem, refer to the dual-OPF-CE.pdf. It 
+  1、For Case 2 and Case 6, the dual technique must be used for solution; otherwise, the solution may fail. For the dualization of the problem, refer to the <<dual-OPF-CE.pdf>>. It 
   should be noted that Reference [Zero Duality Gap in Optimal Power Flow Problem] (doi: 10.1109/TPWRS.2011.2160974) has proven that the relaxation problem and the dual OPF problem in 
   the main text **satisfy strong duality**, that is, its dual gap is zero. **Therefore,the two solving methods are essentially equivalent.**  The reasons why we did not adopt the 
   dual OPF algorithm for Case 1, Case 3, Case 4 and Case 5 are as follows: At the beginning, we only considered small-scale problems, and large-scale problems were added later. 
