@@ -306,35 +306,9 @@ function [W1, P1, Q1,Plm1, Qlm1, Vk1, alpha1, W2, P2, Q2,Plm2, Qlm2,Vk2, alpha2,
         constraint = [constraint, [-Cmax(1,i)*Cmax(1,i), Pdevice(i,2), Qdevice(i,2); Pdevice(i,2), -1, 0; Qdevice(i,2), 0, -1] <= 0];
     end
    
-    options = sdpsettings('solver', 'sedumi', 'sedumi.maxiter', 100, 'sedumi.eps', 1e-10);
-    sol = solvesdp(constraint, obj, options)
+    % The constraints and objective function have both been constructed. 
+    % At this point, the solver is called and the constraints and objective function are passed into it.
 
 
-    gen_cost = 0;
-    for i = 1 : ng1+nv
-        gen_cost = gen_cost + value(alpha1(i));
-    end
-    for i = 1 : ng2 + nv
-         gen_cost = gen_cost + value(alpha2(i));
-    end   
     
-
-    device_cost = 0;
-    for i = 1:nsop
-        device_cost = device_cost + 1000*baseMVA1*Cmax(1,i)*1000 / (365*10*24*7);
-    end
-    for i = 1 : nrpfc
-        device_cost = device_cost + 234*baseMVA1*Cmax(1,i+nsop)*1000 / (365*10*24*7);
-    end
-
-
-    loss_cost = 0;
-    for i = 1:nl1
-        loss_cost = loss_cost + Closs * abs(value(Plm1(i,1))+value(Plm1(i,2)));
-    end
-    for i = 1:nl2
-        loss_cost = loss_cost + Closs * abs(value(Plm2(i,1))+value(Plm2(i,2)));
-    end
-    
-    total_cost = gen_cost + loss_cost + device_cost;
 end
