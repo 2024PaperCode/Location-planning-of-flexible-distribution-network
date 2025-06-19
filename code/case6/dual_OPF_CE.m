@@ -165,21 +165,11 @@ function [total_cost, loss_cost, device_cost] = OPFCE(nsop, nrpfc, fr_sop,to_sop
         end
     end
 
-    options = sdpsettings('solver', 'sedumi','sedumi.eps', 1e-6);
-    sol = solvesdp(constraint, obj, options)
 
 
-    loss_cost = 0;  %%% Carry out calculations based on the obtained Lagrange multipliers.
-    device_cost = 0;
-    
-    for i = 1 : ndevice
-        if i <= nsop
-            device_cost = device_cost + Cmax(i)*1000*1000*baseMVA/(3650*24*7);
-        else
-            device_cost = device_cost + Cmax(i)*1000*234*baseMVA/(3650*24*7);
-    end
 
-    total_cost = value(h) + device_cost + loss_cost;
+    % The constraints and objective function have both been constructed. 
+    % At this point, the solver is called and the constraints and objective function are passed into it.
 
     
 end
