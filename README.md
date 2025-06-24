@@ -9,7 +9,7 @@ The following points should be noted:
   the problem is  detailed in <<dual-OPF-CE.pdf>>. It should be noted that Reference [Zero Duality Gap in Optimal Power Flow Problem] (doi: 10.1109/TPWRS.2011.2160974) has proven 
   that the relaxation problem and the dual OPF problem in the main text **satisfy strong duality**, that is, its dual gap is zero. **Therefore,the two solving methods are essentially 
   equivalent.**  In addition, there are many other methods to accelerate the solution of SDP, such as partitioning the W matrix and then using the sparsity of the matrix to 
-  accelerate the solution, etc.
+  accelerate the solution [Solution of Optimal Power Flow Problems by Semi-definite Programming] (doi: 10.13334/j.0258-8013.pcsee.2008.19.006).
 
   2、The solution accuracy is generally set to 1e-7, but in order to accelerate the calculation in the paper, we set the solution accuracy to 1e-4. It should be noted that the 
 accuracy of 1e-4 roughly meets the accuracy requirements, and the optimal gap between the two is very small , for example, for IEEE 33 bus system, the value is 78.34 when 
