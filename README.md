@@ -15,6 +15,8 @@ The following points should be noted:
 accuracy of 1e-4 roughly meets the accuracy requirements, and the optimal gap between the two is very small , for example, for IEEE 33 bus system, the value is 78.34 when 
 the accuracy is 1e-4 and 78.35 when the accuracy is 1e-7, the optimal gap between the two is approximately 0.01/78.35 ≈ 0%. So the two can be approximately considered equal.
 
+  3、The empirical running times in the text are all based on the times obtained by the second method.
+
 If you have any questions about the manuscript or code, please contact 1743773910@qq.com or leave a message under this repository.
 
   
