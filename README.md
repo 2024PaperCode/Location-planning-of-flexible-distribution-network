@@ -13,7 +13,7 @@ The following points should be noted:
 
   2、The solution accuracy is generally set to 1e-7, but in order to accelerate the calculation in the paper, we set the solution accuracy to 1e-4. It should be noted that the 
 accuracy of 1e-4 roughly meets the accuracy requirements, and the optimal gap between the two is very small , for example, for IEEE 33 bus system, the value is 78.34 when 
-the accuracy is 1e-4 and 78.10 when the accuracy is 1e-7, the optimal gap between the two is approximately 0.3%. So the two can be approximately considered equal.
+the accuracy is 1e-4 and 78.35 when the accuracy is 1e-7, the optimal gap between the two is approximately 0.01/78.35 ≈ 0%. So the two can be approximately considered equal.
 
 If you have any questions about the manuscript or code, please contact 1743773910@qq.com or leave a message under this repository.
 
